@@ -9,15 +9,17 @@ on:
   pull_request:
     branches: [ "master" ]
 
-jobs:     
+jobs:  
+
   hello_world_job:
+
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: A job to say hello
     steps:
     - name: Hello world action step
       id: hello
       uses: thelo67/accelerate-devops-with-github-ch-6-1@v1
       with:
         who-to-greet: 'Tuomo Pekka Helo'
-    - name: Get the output time
-      run: echo "The time was ${{ steps.hello.outputs.time }}"
+    - name: Get the output time
+      run: echo "The time was ${{ steps.hello.outputs.time }}"
